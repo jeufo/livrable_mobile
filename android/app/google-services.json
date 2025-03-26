@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "661108147095",
+    "project_id": "bagels-a1a65",
+    "storage_bucket": "bagels-a1a65.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661108147095:android:3745cbdc78650917a27ad2",
+        "android_client_info": {
+          "package_name": "com.mycompany.bagels"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfsIyt42PDu_LjHQCd3nTlsNp2U-RvwE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
