@@ -132,9 +132,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => GestiondesempruntsWidget(),
         ),
         FFRoute(
-          name: ExoWidget.routeName,
-          path: ExoWidget.routePath,
-          builder: (context, params) => ExoWidget(),
+          name: ModifierMembreWidget.routeName,
+          path: ModifierMembreWidget.routePath,
+          builder: (context, params) => ModifierMembreWidget(
+            userRef: params.getParam(
+              'userRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['membres'],
+            ),
+          ),
         ),
         FFRoute(
           name: ParametresWidget.routeName,

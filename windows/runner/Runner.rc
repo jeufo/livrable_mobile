@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "bagels" "\0"
+            VALUE "CompanyName", "livrable" "\0"
             VALUE "FileDescription", "A new Flutter project." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "bagels" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 bagels. All rights reserved." "\0"
-            VALUE "OriginalFilename", "bagels.exe" "\0"
-            VALUE "ProductName", "bagels" "\0"
+            VALUE "InternalName", "livrable" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 livrable. All rights reserved." "\0"
+            VALUE "OriginalFilename", "livrable.exe" "\0"
+            VALUE "ProductName", "livrable" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
