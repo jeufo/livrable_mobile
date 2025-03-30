@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dash_widget.dart' show DashWidget;
+import '/index.dart';
+import 'reunion_widget.dart' show ReunionWidget;
 import 'package:flutter/material.dart';
 
-class DashModel extends FlutterFlowModel<DashWidget> {
+class ReunionModel extends FlutterFlowModel<ReunionWidget> {
   @override
   void initState(BuildContext context) {}
 
