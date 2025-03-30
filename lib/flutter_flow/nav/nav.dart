@@ -76,13 +76,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? LoggedInWidget() : LogInWidget(),
+          appStateNotifier.loggedIn ? TontinedashWidget() : LogInWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? LoggedInWidget() : LogInWidget(),
+              appStateNotifier.loggedIn ? TontinedashWidget() : LogInWidget(),
         ),
         FFRoute(
           name: LogInWidget.routeName,
@@ -90,14 +90,57 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => LogInWidget(),
         ),
         FFRoute(
-          name: LoggedInWidget.routeName,
-          path: LoggedInWidget.routePath,
-          builder: (context, params) => LoggedInWidget(),
+          name: TontinedashWidget.routeName,
+          path: TontinedashWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => TontinedashWidget(),
         ),
         FFRoute(
-          name: DashWidget.routeName,
-          path: DashWidget.routePath,
-          builder: (context, params) => DashWidget(),
+          name: MembresWidget.routeName,
+          path: MembresWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => MembresWidget(),
+        ),
+        FFRoute(
+          name: PaiementWidget.routeName,
+          path: PaiementWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => PaiementWidget(),
+        ),
+        FFRoute(
+          name: TiragesWidget.routeName,
+          path: TiragesWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => TiragesWidget(),
+        ),
+        FFRoute(
+          name: ReunionWidget.routeName,
+          path: ReunionWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => ReunionWidget(),
+        ),
+        FFRoute(
+          name: ContributionsWidget.routeName,
+          path: ContributionsWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => ContributionsWidget(),
+        ),
+        FFRoute(
+          name: GestiondesempruntsWidget.routeName,
+          path: GestiondesempruntsWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => GestiondesempruntsWidget(),
+        ),
+        FFRoute(
+          name: ExoWidget.routeName,
+          path: ExoWidget.routePath,
+          builder: (context, params) => ExoWidget(),
+        ),
+        FFRoute(
+          name: ParametresWidget.routeName,
+          path: ParametresWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => ParametresWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

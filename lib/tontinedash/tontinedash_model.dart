@@ -1,9 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
-import 'logged_in_widget.dart' show LoggedInWidget;
+import 'tontinedash_widget.dart' show TontinedashWidget;
 import 'package:flutter/material.dart';
 
-class LoggedInModel extends FlutterFlowModel<LoggedInWidget> {
+class TontinedashModel extends FlutterFlowModel<TontinedashWidget> {
   @override
   void initState(BuildContext context) {}
 

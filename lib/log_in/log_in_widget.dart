@@ -110,6 +110,8 @@ class _LogInWidgetState extends State<LogInWidget>
         ],
       ),
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -178,14 +180,16 @@ class _LogInWidgetState extends State<LogInWidget>
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 0.0, 0.0),
                                     child: Text(
-                                      'Rosni App',
+                                      'Tontine app',
                                       style: FlutterFlowTheme.of(context)
-                                          .headlineMedium
+                                          .displayMedium
                                           .override(
                                             fontFamily: 'Inter Tight',
                                             color: FlutterFlowTheme.of(context)
-                                                .secondary,
+                                                .primaryText,
                                             letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w800,
+                                            fontStyle: FontStyle.italic,
                                           ),
                                     ),
                                   ),
@@ -201,8 +205,10 @@ class _LogInWidgetState extends State<LogInWidget>
                             maxWidth: 602.0,
                           ),
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            border: Border.all(
+                              color: FlutterFlowTheme.of(context).secondary,
+                            ),
                           ),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -214,7 +220,7 @@ class _LogInWidgetState extends State<LogInWidget>
                                   child: TabBar(
                                     isScrollable: true,
                                     labelColor: FlutterFlowTheme.of(context)
-                                        .primaryText,
+                                        .secondaryBackground,
                                     unselectedLabelColor:
                                         FlutterFlowTheme.of(context)
                                             .secondaryText,
@@ -597,7 +603,7 @@ class _LogInWidgetState extends State<LogInWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            LoggedInWidget
+                                                            TontinedashWidget
                                                                 .routeName,
                                                             context.mounted);
                                                       },
@@ -622,7 +628,7 @@ class _LogInWidgetState extends State<LogInWidget>
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primary,
+                                                                .success,
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -796,7 +802,7 @@ class _LogInWidgetState extends State<LogInWidget>
                                                                   }
 
                                                                   context.goNamedAuth(
-                                                                      LoggedInWidget
+                                                                      TontinedashWidget
                                                                           .routeName,
                                                                       context
                                                                           .mounted);
@@ -880,7 +886,7 @@ class _LogInWidgetState extends State<LogInWidget>
                                                                         }
 
                                                                         context.goNamedAuth(
-                                                                            LoggedInWidget.routeName,
+                                                                            TontinedashWidget.routeName,
                                                                             context.mounted);
                                                                       },
                                                                       text:
@@ -972,6 +978,9 @@ class _LogInWidgetState extends State<LogInWidget>
                                                         .labelMedium
                                                         .override(
                                                           fontFamily: 'Inter',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
@@ -1466,7 +1475,7 @@ class _LogInWidgetState extends State<LogInWidget>
                                                             ));
 
                                                         context.goNamedAuth(
-                                                            LoggedInWidget
+                                                            LogInWidget
                                                                 .routeName,
                                                             context.mounted);
                                                       },
@@ -1543,6 +1552,9 @@ class _LogInWidgetState extends State<LogInWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'Inter',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryBackground,
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
@@ -1606,7 +1618,7 @@ class _LogInWidgetState extends State<LogInWidget>
                                                                   }
 
                                                                   context.goNamedAuth(
-                                                                      LoggedInWidget
+                                                                      TontinedashWidget
                                                                           .routeName,
                                                                       context
                                                                           .mounted);
@@ -1690,7 +1702,7 @@ class _LogInWidgetState extends State<LogInWidget>
                                                                         }
 
                                                                         context.goNamedAuth(
-                                                                            LoggedInWidget.routeName,
+                                                                            TontinedashWidget.routeName,
                                                                             context.mounted);
                                                                       },
                                                                       text:
