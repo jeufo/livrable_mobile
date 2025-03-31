@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(bagels LANGUAGES CXX)
+project(livrable LANGUAGES CXX)
 
-set(BINARY_NAME "bagels")
+set(BINARY_NAME "livrable")
 
 cmake_policy(SET CMP0063 NEW)
 

@@ -8,5 +8,5 @@ export '/reunion/reunion_widget.dart' show ReunionWidget;
 export '/contributions/contributions_widget.dart' show ContributionsWidget;
 export '/gestiondesemprunts/gestiondesemprunts_widget.dart'
     show GestiondesempruntsWidget;
-export '/exo/exo_widget.dart' show ExoWidget;
+export '/modifier_membre/modifier_membre_widget.dart' show ModifierMembreWidget;
 export '/parametres/parametres_widget.dart' show ParametresWidget;
