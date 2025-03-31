@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'membres_model.dart';
 export 'membres_model.dart';
@@ -877,6 +878,15 @@ class _MembresWidgetState extends State<MembresWidget> {
                                 child: TextFormField(
                                   controller: _model.textController5,
                                   focusNode: _model.textFieldFocusNode5,
+                                  onChanged: (_) => EasyDebounce.debounce(
+                                    '_model.textController5',
+                                    Duration(milliseconds: 2000),
+                                    () async {
+                                      FFAppState().recherche =
+                                          _model.textController5.text;
+                                      safeSetState(() {});
+                                    },
+                                  ),
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     hintText: 'Rechercher',
