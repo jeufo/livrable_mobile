@@ -8,9 +8,8 @@ import 'package:flutter/material.dart';
 import 'contributions_model.dart';
 export 'contributions_model.dart';
 
-/// une page pour la gestion des contirbutions des membres dune tontine avec
-/// une icon menu a droite et un drawer on peut soit ajouter une contribution
-/// , modifier ou supprimer .
+/// une page pour la gestion des contirbutions des membres dune tontine ..On
+/// peut soit ajouter une contribution , modifier ou supprimer .
 ///
 /// on peut aussi marquer certaines cintributions comme paye ou non paye
 class ContributionsWidget extends StatefulWidget {
@@ -103,6 +102,15 @@ class _ContributionsWidgetState extends State<ContributionsWidget> {
                                   .override(
                                     fontFamily: 'Inter',
                                     color: FlutterFlowTheme.of(context).info,
+                                    letterSpacing: 0.0,
+                                  ),
+                            ),
+                            Text(
+                              currentUserEmail,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                             ),

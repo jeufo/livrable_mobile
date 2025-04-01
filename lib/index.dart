@@ -10,3 +10,5 @@ export '/gestiondesemprunts/gestiondesemprunts_widget.dart'
     show GestiondesempruntsWidget;
 export '/modifier_membre/modifier_membre_widget.dart' show ModifierMembreWidget;
 export '/parametres/parametres_widget.dart' show ParametresWidget;
+export '/ajouter_contribution/ajouter_contribution_widget.dart'
+    show AjouterContributionWidget;

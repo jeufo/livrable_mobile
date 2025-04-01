@@ -143,7 +143,7 @@ class _ModifierMembreWidgetState extends State<ModifierMembreWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 12.0),
                                       child: Text(
-                                        'Ajouter un membre',
+                                        'modifier un membre',
                                         style: FlutterFlowTheme.of(context)
                                             .titleMedium
                                             .override(

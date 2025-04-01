@@ -8,12 +8,7 @@ import 'package:flutter/material.dart';
 import 'gestiondesemprunts_model.dart';
 export 'gestiondesemprunts_model.dart';
 
-/// une page pour la gestion des emprunts des membres dune tontine avec une
-/// icon menu a droite et un drawer on peut soit ajouter une contribution ,
-/// modifier ou supprimer .
-///
-/// on peut aussi marquer certaines cintributions comme rembourse ou non no
-/// rembourse
+/// page de gestion des emprunts
 class GestiondesempruntsWidget extends StatefulWidget {
   const GestiondesempruntsWidget({super.key});
 
@@ -100,6 +95,15 @@ class _GestiondesempruntsWidgetState extends State<GestiondesempruntsWidget> {
                                 .override(
                                   fontFamily: 'Inter',
                                   color: FlutterFlowTheme.of(context).info,
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
+                          Text(
+                            currentUserEmail,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
                           ),

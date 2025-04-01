@@ -20,9 +20,9 @@ class FFAppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  String _recherche = '\" \"';
-  String get recherche => _recherche;
-  set recherche(String value) {
-    _recherche = value;
+  bool _reunion = false;
+  bool get reunion => _reunion;
+  set reunion(bool value) {
+    _reunion = value;
   }
 }

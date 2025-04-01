@@ -9,8 +9,7 @@ import 'package:flutter/material.dart';
 import 'parametres_model.dart';
 export 'parametres_model.dart';
 
-/// un page parametre qui permet de changer la langue et les prefences de
-/// notification dans de lapplication vaec licon de menu a gauche et un drawer
+/// page de choix de parametres
 class ParametresWidget extends StatefulWidget {
   const ParametresWidget({super.key});
 
@@ -97,6 +96,15 @@ class _ParametresWidgetState extends State<ParametresWidget> {
                                   .override(
                                     fontFamily: 'Inter',
                                     color: FlutterFlowTheme.of(context).info,
+                                    letterSpacing: 0.0,
+                                  ),
+                            ),
+                            Text(
+                              currentUserEmail,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                             ),

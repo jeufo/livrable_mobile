@@ -101,6 +101,15 @@ class _TontinedashWidgetState extends State<TontinedashWidget> {
                                     letterSpacing: 0.0,
                                   ),
                             ),
+                            Text(
+                              currentUserEmail,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Inter',
+                                    letterSpacing: 0.0,
+                                  ),
+                            ),
                           ],
                         ),
                       ),
@@ -142,19 +151,29 @@ class _TontinedashWidgetState extends State<TontinedashWidget> {
                               thickness: 1.0,
                               color: FlutterFlowTheme.of(context).alternate,
                             ),
-                            Material(
-                              color: Colors.transparent,
-                              child: ListTile(
-                                title: Text(
-                                  'Contributions',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyLarge
-                                      .override(
-                                        fontFamily: 'Inter',
-                                        letterSpacing: 0.0,
-                                      ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context
+                                    .pushNamed(ContributionsWidget.routeName);
+                              },
+                              child: Material(
+                                color: Colors.transparent,
+                                child: ListTile(
+                                  title: Text(
+                                    'Contributions',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Inter',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                  dense: false,
                                 ),
-                                dense: false,
                               ),
                             ),
                             Divider(
