@@ -148,6 +148,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: ParametresWidget.routePath,
           requireAuth: true,
           builder: (context, params) => ParametresWidget(),
+        ),
+        FFRoute(
+          name: AjouterContributionWidget.routeName,
+          path: AjouterContributionWidget.routePath,
+          builder: (context, params) => AjouterContributionWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -119,6 +119,15 @@ class _PaiementWidgetState extends State<PaiementWidget> {
                                   letterSpacing: 0.0,
                                 ),
                           ),
+                          Text(
+                            currentUserEmail,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Inter',
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
                         ],
                       ),
                     ),

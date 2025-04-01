@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -9,8 +10,7 @@ import 'reunion_model.dart';
 export 'reunion_model.dart';
 
 /// une page pour organiser soit une reunion en visioconference ou clavarder
-/// dans un tontine avec un bouton menu a droite et un drawer le plus
-/// ergonomique possible
+/// dans un tontine
 class ReunionWidget extends StatefulWidget {
   const ReunionWidget({super.key});
 
@@ -96,6 +96,15 @@ class _ReunionWidgetState extends State<ReunionWidget> {
                                   .override(
                                     fontFamily: 'Inter',
                                     color: FlutterFlowTheme.of(context).info,
+                                    letterSpacing: 0.0,
+                                  ),
+                            ),
+                            Text(
+                              currentUserEmail,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -415,7 +424,7 @@ class _ReunionWidgetState extends State<ReunionWidget> {
                   size: 24.0,
                 ),
                 onPressed: () async {
-                  scaffoldKey.currentState!.openDrawer();
+                  scaffoldKey.currentState!.openEndDrawer();
                 },
               ),
             ),
@@ -905,8 +914,9 @@ class _ReunionWidgetState extends State<ReunionWidget> {
                       ),
                     ),
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        FFAppState().reunion = true;
+                        safeSetState(() {});
                       },
                       text: 'Planifier une réunion',
                       icon: Icon(
@@ -936,6 +946,42 @@ class _ReunionWidgetState extends State<ReunionWidget> {
                         ),
                         borderRadius: BorderRadius.circular(12.0),
                       ),
+                    ),
+                    FlutterFlowCalendar(
+                      color: FlutterFlowTheme.of(context).primary,
+                      iconColor: FlutterFlowTheme.of(context).secondaryText,
+                      weekFormat: false,
+                      weekStartsMonday: false,
+                      rowHeight: 48.0,
+                      onChange: (DateTimeRange? newSelectedDate) {
+                        safeSetState(
+                            () => _model.calendarSelectedDay = newSelectedDate);
+                      },
+                      titleStyle:
+                          FlutterFlowTheme.of(context).titleLarge.override(
+                                fontFamily: 'Inter Tight',
+                                letterSpacing: 0.0,
+                              ),
+                      dayOfWeekStyle:
+                          FlutterFlowTheme.of(context).bodyLarge.override(
+                                fontFamily: 'Inter',
+                                letterSpacing: 0.0,
+                              ),
+                      dateStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.override(
+                                fontFamily: 'Inter',
+                                letterSpacing: 0.0,
+                              ),
+                      selectedDateStyle:
+                          FlutterFlowTheme.of(context).titleSmall.override(
+                                fontFamily: 'Inter Tight',
+                                letterSpacing: 0.0,
+                              ),
+                      inactiveDateStyle:
+                          FlutterFlowTheme.of(context).labelMedium.override(
+                                fontFamily: 'Inter',
+                                letterSpacing: 0.0,
+                              ),
                     ),
                   ],
                 ),
